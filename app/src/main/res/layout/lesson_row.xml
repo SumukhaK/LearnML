@@ -1,0 +1,89 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lesson_rowlayout">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/topview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/building"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/contents_layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/subject_textview"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:visibility="visible"
+                android:textColor="@color/black"
+                android:text="@string/app_name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/userinput_textview"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:visibility="visible"
+                android:textColor="@color/black"
+                android:text=""/>
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:id="@+id/recordaudio_imageview"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_keyboard_voice"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/playaudio_fab"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:src="@drawable/ic_play_arrow"
+        app:layout_anchor="@id/topview_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        app:layout_anchorGravity="bottom|center"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/nextscreen_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/previousscreen_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_arrow_left" />
+</android.support.design.widget.CoordinatorLayout>
